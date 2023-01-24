@@ -1,16 +1,20 @@
 import './assets/styles/styles.global.scss'
 
-import { StrictMode } from 'react'
+import { Fragment, StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
+
+import Header from './components/Header/Header'
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 )
 root.render(
 	<StrictMode>
-		<div>
-			Hello World
-			<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-		</div>
+		<Fragment>
+			<Header />
+			<main>
+				Here Main
+			</main>
+		</Fragment>
 	</StrictMode>
 )
