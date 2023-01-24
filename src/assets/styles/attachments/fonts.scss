@@ -1,0 +1,17 @@
+@include addFont(OrchideaPro, Medium, orchideapro-medium, 500, normal);
+@include addFont(Roboto, Regular, roboto-regular, 400, normal);
+@include addFont(Manrope, Medium, manrope-medium, 500, normal);
+
+html {
+	font-family: 'Manrope', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: var(--color-gray-400);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'OrchideaPro', Helvetica, Arial, sans-serif;
+}
+
+button, input {
+	font: inherit;
+}
