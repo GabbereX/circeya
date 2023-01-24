@@ -1,5 +1,22 @@
 * {
 	--text-color: #141414;
+	--white-color: #fff;
+	--gray-100: #cbcbcb;
 
 	--header-height: 100px;
+	--padding-container: 260px;
+
+	--duration-default: 0.3s;
+}
+
+@media (max-width: 1440px) {
+	* {
+		--padding-container: 160px;
+	}
+}
+
+@media (max-width: 1280px) {
+	* {
+		--padding-container: 60px;
+	}
 }

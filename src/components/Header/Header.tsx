@@ -3,16 +3,25 @@ import { FC } from 'react'
 import logo from '@images/svg/logo.svg'
 import styles from './Header.module.scss'
 
-const Header: FC = () => {
-	console.log(logo)
+export const Header: FC = () => {
 	return (
 		<header className={ styles.root }>
-			{/*<img*/ }
-			{/*	src={ logo }*/ }
-			{/*	alt='Circeya Logotype'*/ }
-			{/*/>*/ }
+			<a
+				className={ styles.logo }
+				href='/'
+			>
+				<img
+					src={ logo }
+					alt='Circeya Logotype'
+				/>
+			</a>
+
+			<a
+				href='tel:+74954954954'
+				className={ styles.telephone }
+			>
+				+7 (495) 495-49-54
+			</a>
 		</header>
 	)
 }
-
-export default Header

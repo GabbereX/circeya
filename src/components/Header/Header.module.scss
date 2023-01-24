@@ -1,4 +1,28 @@
 .root {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	padding: 0 var(--padding-container);
 	height: var(--header-height);
+	width: 100%;
+
 	background: linear-gradient(0deg, rgba(70, 67, 65, 1) 10%, rgba(1, 1, 1, 1) 100%);
+}
+
+.logo {
+	line-height: 0;
+}
+
+.telephone {
+	color: var(--white-color);
+	transition: color var(--duration-default) ease;
+
+	&:hover {
+		color: var(--gray-100)
+	}
 }
