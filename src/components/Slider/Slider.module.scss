@@ -1,0 +1,15 @@
+.root {
+	display: flex;
+	padding: 0 var(--padding-container);
+	overflow: hidden;
+}
+
+.image {
+	max-height: 490px;
+	min-width: auto;
+	object-fit: cover;
+
+	&:not(:last-child) {
+		margin-right: 40px;
+	}
+}

@@ -1,11 +1,32 @@
-main {
-	min-height: 200vh;
-}
-
 a {
 	text-decoration: none;
 }
 
 body {
-	padding-top: var(--header-height);
+	padding-top: calc(var(--header-height) + 200px);
+}
+
+img {
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.pr-section {
+	padding-right: var(--padding-section);
+}
+
+.pl-section {
+	padding-left: var(--padding-section);
+}
+
+@media (max-width: 1440px) {
+	body {
+		padding-top: calc(var(--header-height) + 125px);
+	}
+}
+
+@media (max-width: 1280px) {
+	body {
+		padding-top: calc(var(--header-height) + 100px);
+	}
 }

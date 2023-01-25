@@ -4,13 +4,33 @@
 
 html {
 	font-family: 'Manrope', Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	line-height: 24px;
-	color: var(--text-color);
+	font-size: var(--font-size-default);
+	line-height: var(--line-height-default);
+	color: var(--gray-color-800);
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'OrchideaPro', Helvetica, Arial, sans-serif;
+}
+
+h2, h3 {
+	font-size: var(--font-size-big);
+
+}
+
+h2 {
+	line-height: var(--font-size-big);
+}
+
+h3 {
+	line-height: var(--line-height-middle);
+}
+
+footer {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	color: var(--white-color);
+	font-size: 14px;
+	line-height: 16px;
 }
 
 button, input {

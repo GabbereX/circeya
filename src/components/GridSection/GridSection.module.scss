@@ -1,0 +1,39 @@
+.root_content {
+	display: grid;
+	gap: var(--grid-gap-default);
+	grid-template-columns: 1.46fr 1fr;
+
+	& > .image {
+		height: 480px;
+	}
+
+	&:nth-child(2n) {
+		direction: rtl;
+		grid-template-columns: 1fr 1.46fr;
+
+		& > .image {
+			height: 411px;
+		}
+
+		& > div {
+			width: 70%;
+			direction: ltr;
+		}
+	}
+
+	& > div {
+		align-self: center;
+		
+		h3 {
+			margin-bottom: 25px;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: var(--grid-gap-default);
+	}
+}
+
+.image {
+	object-fit: cover;
+}
