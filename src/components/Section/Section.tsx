@@ -18,7 +18,7 @@ export const Section: FC<ISection> = (props) => {
 
 	return (
 		<section
-			className={ `${ paddingClass } ${ styles.root }` }
+			className={ `${ styles.root } ${ paddingClass }` }
 		>
 			<h2
 				className={ styles.title }

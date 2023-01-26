@@ -5,7 +5,10 @@ import styles from './Header.module.scss'
 
 export const Header: FC = () => {
 	return (
-		<header className={ styles.root }>
+		<header
+			id='header'
+			className={ styles.root }
+		>
 			<a
 				className={ styles.logo }
 				href='/'
