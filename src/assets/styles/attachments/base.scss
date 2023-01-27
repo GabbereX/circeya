@@ -3,7 +3,7 @@ a {
 }
 
 body {
-	padding-top: calc(var(--header-height) + 200px);
+	padding-top: var(--header-height);
 	overflow-x: hidden;
 }
 
@@ -12,27 +12,10 @@ img {
 	min-width: 100%;
 }
 
-section {
-	//height: 100%;
-	//overflow-x: hidden;
-}
-
 .pr-section {
 	padding-right: var(--padding-section);
 }
 
 .pl-section {
 	padding-left: var(--padding-section);
-}
-
-@media (max-width: 1440px) {
-	body {
-		padding-top: calc(var(--header-height) + 125px);
-	}
-}
-
-@media (max-width: 1280px) {
-	body {
-		padding-top: calc(var(--header-height) + 100px);
-	}
 }

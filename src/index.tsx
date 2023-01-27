@@ -1,6 +1,6 @@
 import './assets/styles/styles.global.scss'
 
-import { Fragment, StrictMode } from 'react'
+import { Fragment } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { Header } from '@components/Header'
@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 )
 
 root.render(
-	<StrictMode>
+	<>
 		<Fragment>
 			<Header />
 			<Main />
 			<Footer />
 		</Fragment>
-	</StrictMode>
+	</>
 )
