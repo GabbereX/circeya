@@ -4,11 +4,17 @@ a {
 
 body {
 	padding-top: calc(var(--header-height) + 200px);
+	overflow-x: hidden;
 }
 
 img {
 	max-width: 100%;
 	min-width: 100%;
+}
+
+section {
+	//height: 100%;
+	//overflow-x: hidden;
 }
 
 .pr-section {

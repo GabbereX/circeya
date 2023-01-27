@@ -6,6 +6,8 @@ import { sliderImages } from '@constants/views.consts'
 
 import styles from './Slider.module.scss'
 
+gsap.registerPlugin(ScrollTrigger)
+
 export const Slider: FC = () => {
 	const pinWrapRef = useRef<HTMLDivElement>(null)
 	const animationWrapRef = useRef<HTMLDivElement>(null)
@@ -13,37 +15,49 @@ export const Slider: FC = () => {
 	useEffect(() => {
 		const pinWrap = pinWrapRef.current
 		const animationWrap = animationWrapRef.current
-		const section = pinWrap?.parentNode as HTMLDivElement
+		// const section = pinWrap?.parentNode as HTMLDivElement
+		const section = document.getElementById('slider')
 
 		if (pinWrap && animationWrap && section) {
-			gsap.registerPlugin(ScrollTrigger)
-
-			// const value = -(animationWrap.scrollWidth - window.innerWidth)
-
-			console.log(animationWrap.scrollWidth)
+			const animationWrapPadding =
+				+window
+					.getComputedStyle(animationWrap).paddingLeft
+					.replace('px', '')
 
 			gsap.fromTo(animationWrap, {
 				x: 0
 			}, {
-				x: () => -(animationWrap.scrollWidth - window.innerWidth),
+				x: () => -((animationWrap.scrollWidth - window.innerWidth) + animationWrapPadding),
 				ease: 'none',
 				scrollTrigger: {
 					trigger: section,
 					start: 'top top',
-					end: '+=' + (animationWrap.scrollWidth - window.innerWidth),
+					end: '+=' + ((animationWrap.scrollWidth - window.innerWidth / 4)),
 					pin: pinWrap,
+					// pinnedContainer: section,
 					invalidateOnRefresh: true,
 					scrub: true
+					// pinSpacer: section
+					// anticipatePin: 1
+					// markers: true
 				}
 			})
 		}
 	}, [])
 
 	return (
-		<div ref={ pinWrapRef }>
+		<div
+			ref={ pinWrapRef }
+			// style={ {
+			// 	minHeight: '100%'
+			// } }
+		>
 			<div
 				ref={ animationWrapRef }
 				className={ styles.root }
+				// style={ {
+				// 	minHeight: '100%'
+				// } }
 			>
 				{
 					sliderImages.map((image, index) => {

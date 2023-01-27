@@ -16,7 +16,9 @@ export const Main: FC = () => {
 			>
 				<GridSection content={ sectionGridContentOne } />
 			</Section>
-			<Section title='Lorem ipsum dolor sit amet'>
+			<Section
+				title='Lorem ipsum dolor sit amet'
+				id='slider'>
 				<Slider />
 			</Section>
 			<Section

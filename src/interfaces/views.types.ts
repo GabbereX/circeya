@@ -5,6 +5,7 @@ export interface ISection {
 	children: ReactNode
 	title: string
 	padding?: SectionPadding
+	id?: string
 }
 
 export interface IGridContent {

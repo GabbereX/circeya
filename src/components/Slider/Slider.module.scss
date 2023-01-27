@@ -1,13 +1,14 @@
 .root {
 	display: flex;
 	padding: 0 var(--padding-container);
-	overflow: hidden;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-
-	&::-webkit-scrollbar {
-		width: 0;
-	}
+	//overflow: auto;
+	//height: 120%;
+	//-ms-overflow-style: none;
+	//scrollbar-width: none;
+	//
+	//&::-webkit-scrollbar {
+	//	width: 0;
+	//}
 }
 
 .image {
