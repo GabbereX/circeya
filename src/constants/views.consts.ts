@@ -52,5 +52,5 @@ export const sliderImages: Array<string> = [
 	slider_image_05,
 	slider_image_06,
 	slider_image_07,
-	slider_image_08
+	slider_image_08,
 ]
